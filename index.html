@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <!-- Nebula background -->
+    <div class="nebula nebula-tl"></div>
+    <div class="nebula nebula-tr"></div>
+    <div class="nebula nebula-bl"></div>
+    <div class="nebula nebula-br"></div>
+
+    <div class="todo-container">
+      <header class="header">
+        <h1 class="todo-title">✨ To Do List ✨</h1>
+        <p class="todo-sub">Double-click an item to mark it complete</p>
+      </header>
+
+      <main class="main">
+        <form class="todo-form">
+          <div class="todo-input-area">
+            <input
+              type="text"
+              id="ltdAdd"
+              placeholder="Masukkan List To Do"
+              class="todo-input"
+              required
+            />
+            <button type="button" id="addButton" class="todo-btn">Add</button>
+          </div>
+        </form>
+      </main>
+
+      <div class="main2">
+        <ol id="ltdMain" class="todo-list"></ol>
+      </div>
+
+      <footer class="footer">
+        <button
+          id="selesaiButton"
+          class="ukbtn1"
+          onclick="clearCompletedToDoItems()"
+        >
+          Clear Complete
+        </button>
+        <button id="hapusDaftarButton" class="ukbtn2" onclick="emptyList()">
+          Empty List
+        </button>
+        <button id="simpanDaftarButton" class="ukbtn3" onclick="saveList()">
+          Save List
+        </button>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
